@@ -28,7 +28,7 @@ test.describe('Change language name on wikipedia', () => {
             await expect(mainPage.getMainMenuLocator()).toContainText(CommonUiData.ENGLISH_LNG_TITLE);
             await expect(page.locator('//html')).toHaveAttribute('lang', 'en');
         })
-        await test.step('logout', async () => {
+        await test.step('logout ', async () => {
             await mainPage.openLogOut();
         })
 
