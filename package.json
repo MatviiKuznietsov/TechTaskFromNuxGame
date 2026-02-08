@@ -1,0 +1,33 @@
+{
+  "name": "techtaskfromnuxgame",
+  "version": "1.0.0",
+  "description": "Tech Task From NuxGame",
+  "keywords": [],
+  "homepage": "https://github.com/MatviiKuznietsov/TechTaskFromNuxGame#readme",
+  "bugs": {
+    "url": "https://github.com/MatviiKuznietsov/TechTaskFromNuxGame/issues"
+  },
+  "scripts": {
+    "test:e2e": "npx playwright test --project=\"e2e tests\"",
+    "test:e2e--ui": "npx playwright test --project=\"e2e tests\" --ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatviiKuznietsov/TechTaskFromNuxGame.git"
+  },
+  "license": "ISC",
+  "author": "MTV",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "log4js": "^6.9.1",
+    "playwright": "^1.58.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
