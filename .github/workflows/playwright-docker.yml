@@ -21,7 +21,7 @@ jobs:
           WIKI_USERNAME: ${{ secrets.WIKI_USERNAME }}
           WIKI_PASSWORD: ${{ secrets.WIKI_PASSWORD }}
         run: |
-          docker compose run --rm -e WIKI_USERNAME -e WIKI_PASSWORD e2e
+          docker compose run --rm e2e
 
       - name: Upload Playwright report
         if: always()
