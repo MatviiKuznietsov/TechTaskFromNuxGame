@@ -9,6 +9,7 @@ jobs:
   e2e:
     runs-on: ubuntu-latest
 
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
