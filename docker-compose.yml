@@ -1,0 +1,23 @@
+#Running e2e tests in Docker.
+#  The report is copied to the host at ./playwright-report/
+#Running:
+#  docker compose run --rm e2e
+#Passing credentials (or create a .env file with WIKI_USERNAME, WIKI_PASSWORD):
+#  docker compose run --rm -e WIKI_USERNAME=... -e WIKI_PASSWORD=... e2e
+#View the HTML report after running:
+#  npx playwright show-report playwright-report
+
+services:
+  e2e:
+    build: .
+    container_name: playwright-e2e
+    init: true
+    ipc: host
+    env_file:
+      - .env
+    environment:
+      - CI=true
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
+    command: npm run test:e2e
