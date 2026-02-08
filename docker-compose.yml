@@ -11,13 +11,12 @@ services:
   e2e:
     build: .
     container_name: playwright-e2e
-    init: true
-    ipc: host
-    env_file:
-      - .env
     environment:
       - CI=true
+      - WIKI_USERNAME=${WIKI_USERNAME}
+      - WIKI_PASSWORD=${WIKI_PASSWORD}
     volumes:
       - ./playwright-report:/app/playwright-report
       - ./test-results:/app/test-results
     command: npm run test:e2e
+
